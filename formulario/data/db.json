@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin123"
+    },
+    {
+      "id": "ab68",
+      "username": "joao",
+      "password": "tiziu",
+      "email": "pressao@midia",
+      "role": "pressao",
+      "status": "online"
+    }
+  ],
+  "products": [],
+  "services": []
+}

@@ -1,0 +1,109 @@
+.services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .services-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .service-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+  
+  .service-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .service-form .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .service-form .cancel-btn {
+    background-color: #6c757d;
+  }
+  
+  .service-form .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .service-form .cancel-btn:hover {
+    background-color: #5a6268;
+  }
+  
+  .service-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .service-item {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .service-buttons .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .service-buttons .edit-btn {
+    background-color: #28a745;
+  }
+  
+  .service-buttons .delete-btn {
+    background-color: #dc3545;
+  }
+  
+  .service-buttons .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .service-buttons .edit-btn:hover {
+    background-color: #218838;
+  }
+  
+  .service-buttons .delete-btn:hover {
+    background-color: #c82333;
+  }
+
+  .no-services {
+    color: #666;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  
