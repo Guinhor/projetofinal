@@ -1,11 +1,31 @@
 import React from 'react';
-import './Footer.css';
+import '../styles/Footer.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
+  const handleIconClick = (url) => {
+    window.open(url, "_blank");
+  };
+
   return (
-    <footer className="footer">
-      <p>© 2024 Cadastro de Produtos</p>
-    </footer>
+    <div className="footer">
+      <p>&copy; 2024 Yago. Todos os direitos reservados.</p>
+      <div className="social-icons">
+        <a href="#" onClick={() => handleIconClick("https://www.facebook.com")}>
+          <FontAwesomeIcon icon={faFacebookF} />
+        </a>
+        <a href="#" onClick={() => handleIconClick("https://www.twitter.com")}>
+          <FontAwesomeIcon icon={faTwitter} />
+        </a>
+        <a href="#" onClick={() => handleIconClick("https://www.instagram.com")}>
+          <FontAwesomeIcon icon={faInstagram} />
+        </a>
+        <a href="#" onClick={() => handleIconClick("https://www.linkedin.com")}>
+          <FontAwesomeIcon icon={faLinkedinIn} />
+        </a>
+      </div>
+    </div>
   );
 };
 

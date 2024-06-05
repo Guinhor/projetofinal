@@ -9,10 +9,12 @@ import AddProduct from './pages/AddProduct';
 import EditProduct from './pages/EditProduct';
 import ErrorPage from './pages/ErrorPage';
 import EditUser from './pages/EditUser';
-import './App.css';
+import Footer from './components/Footer';
+import './styles/App.css';
 
 const App = () => (
   <Router>
+    <div className="app">
     <Routes>
       <Route path="/" element={<Login />} />
       <Route path="/error" element={<h2>Erro ao realizar Login. Verique o nome de usuário e/ou senha.</h2>} />
@@ -24,6 +26,7 @@ const App = () => (
       <Route path="/usuarios/editar/:id" element={<EditUser />} />
       <Route path="*" element={<ErrorPage />} />
     </Routes>
+   </div> 
   </Router>
 );
 

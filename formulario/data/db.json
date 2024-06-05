@@ -6,11 +6,11 @@
       "password": "admin123"
     },
     {
-      "id": "ab68",
-      "username": "joao",
-      "password": "tiziu",
-      "email": "pressao@midia",
-      "role": "pressao",
+      "id": "fe9a",
+      "username": "yago",
+      "password": "yago",
+      "email": "admin@admin",
+      "role": "admin",
       "status": "online"
     }
   ],

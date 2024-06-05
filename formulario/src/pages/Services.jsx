@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Services.css';
+import '../styles/Services.css';
 
 const Services = () => {
   const [services, setServices] = useState([]);

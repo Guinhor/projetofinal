@@ -1,0 +1,81 @@
+/* Container principal */
+.edit-user-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulário */
+.edit-user-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Grupo de formulário */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Rótulos */
+label {
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 8px;
+}
+
+/* Campos de entrada */
+input {
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+  background-color: #ffffff;
+}
+
+/* Botões */
+button {
+  padding: 12px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #004085;
+  transform: translateY(0);
+}
+
+/* Botão cancelar */
+button.cancel-btn {
+  background-color: #6c757d;
+  margin-left: 10px;
+}
+
+button.cancel-btn:hover {
+  background-color: #5a6268;
+}
+
+button.cancel-btn:active {
+  background-color: #4e555b;
+}

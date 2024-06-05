@@ -1,0 +1,105 @@
+/* Container principal */
+.edit-product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #e9ecef;
+  padding: 20px;
+}
+
+/* Título */
+.edit-product-container h2 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #343a40;
+  font-weight: 700;
+}
+
+/* Formulário */
+.edit-product-form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Grupo de formulário */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Rótulos */
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #495057;
+}
+
+/* Campos de entrada e texto */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+  background-color: #ffffff;
+}
+
+/* Campos de texto */
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Botões */
+button.btn {
+  padding: 12px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+button.btn:active {
+  background-color: #004085;
+  transform: translateY(0);
+}
+
+/* Botão cancelar */
+button.cancel-btn {
+  background-color: #6c757d;
+  margin-left: 10px;
+}
+
+button.cancel-btn:hover {
+  background-color: #5a6268;
+}
+
+button.cancel-btn:active {
+  background-color: #4e555b;
+}

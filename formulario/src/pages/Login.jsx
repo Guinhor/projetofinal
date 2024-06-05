@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Login.css'; // Importando o arquivo CSS para estilização
+import '../styles/Login.css'; // Importando o arquivo CSS para estilização
 
 const Login = () => {
   const [username, setUsername] = useState('');

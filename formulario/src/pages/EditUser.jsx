@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import './EditUser.css';
+import '../styles/EditUser.css';
 
 const EditUser = () => {
   const { id } = useParams();
@@ -19,7 +19,7 @@ const EditUser = () => {
 
   const fetchUser = async () => {
     try {
-      const response = await fetch(`http://localhost:3001/users/${id}`);
+      const response = await fetch(`http://localhost:3001/usuarios/${id}`);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -38,7 +38,7 @@ const EditUser = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await fetch(`http://localhost:3001/users/${id}`, {
+      await fetch(`http://localhost:3001/usuarios/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
