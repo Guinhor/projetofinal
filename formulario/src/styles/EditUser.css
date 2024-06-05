@@ -3,9 +3,14 @@
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
-  background-color: #f8f9fa;
+  background-color: #f8f9fa; /* Fundo branco */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode .edit-user-container {
+  background-color: #333; /* Fundo preto */
 }
 
 /* Formulário */
@@ -22,8 +27,13 @@
 /* Rótulos */
 label {
   font-weight: 600;
-  color: #495057;
+  color: #495057; /* Texto escuro */
   margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode label {
+  color: #FFD700; /* Amarelo (Dourado) */
 }
 
 /* Campos de entrada */
@@ -33,21 +43,25 @@ input {
   border-radius: 6px;
   box-sizing: border-box;
   font-size: 1rem;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  background-color: #f8f9fa;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  background-color: #f8f9fa; /* Fundo branco */
 }
 
 input:focus {
   border-color: #007bff;
   box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
-  background-color: #ffffff;
+  background-color: #ffffff; /* Fundo branco */
+}
+
+body.dark-mode input:focus {
+  background-color: #333; /* Fundo preto no modo escuro */
 }
 
 /* Botões */
 button {
   padding: 12px;
-  background-color: #007bff;
-  color: #ffffff;
+  background-color: #007bff; /* Azul */
+  color: #ffffff; /* Texto branco */
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -57,25 +71,34 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Azul mais escuro */
   transform: translateY(-2px);
 }
 
 button:active {
-  background-color: #004085;
+  background-color: #004085; /* Azul escuro */
   transform: translateY(0);
 }
 
 /* Botão cancelar */
 button.cancel-btn {
-  background-color: #6c757d;
+  background-color: #6c757d; /* Cinza */
   margin-left: 10px;
 }
 
 button.cancel-btn:hover {
-  background-color: #5a6268;
+  background-color: #5a6268; /* Cinza mais escuro */
 }
 
 button.cancel-btn:active {
-  background-color: #4e555b;
+  background-color: #4e555b; /* Cinza escuro */
+}
+
+body.dark-mode button.cancel-btn {
+  background-color: #FFD700; /* Amarelo (Dourado) */
+  color: #1a1a1a; /* Preto */
+}
+
+body.dark-mode button.cancel-btn:hover {
+  background-color: #FFC700; /* Tom mais claro de dourado */
 }

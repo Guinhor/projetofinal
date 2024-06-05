@@ -81,6 +81,7 @@ const AddProduct = () => {
           />
         </div>
         <button type="submit" className="btn">Adicionar</button>
+        <button type="button" className="btn" onClick={() => navigate(-1)}>Voltar</button>
       </form>
     </div>
   );

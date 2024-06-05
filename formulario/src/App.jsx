@@ -9,7 +9,6 @@ import AddProduct from './pages/AddProduct';
 import EditProduct from './pages/EditProduct';
 import ErrorPage from './pages/ErrorPage';
 import EditUser from './pages/EditUser';
-import Footer from './components/Footer';
 import './styles/App.css';
 
 const App = () => (

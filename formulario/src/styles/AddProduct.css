@@ -5,27 +5,44 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f0f2f5;
+  background-color: #f7f7f7; /* Fundo branco */
   padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode .add-product-container {
+  background-color: #1a1a1a; /* Fundo preto */
 }
 
 /* Título */
 .add-product-container h2 {
   margin-bottom: 20px;
-  font-size: 2rem;
-  color: #333;
+  font-size: 2.5rem;
+  color: #343a40; /* Texto escuro */
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .add-product-container h2 {
+  color: #ffd700; /* Amarelo (Dourado) */
 }
 
 /* Formulário */
 .add-product-form {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff; /* Fundo branco */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 500px;
   display: flex;
   flex-direction: column;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .add-product-form {
+  background-color: #333; /* Fundo preto */
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.1); /* Sombra amarela (dourada) */
 }
 
 /* Grupo de formulário */
@@ -38,7 +55,12 @@
   display: block;
   margin-bottom: 8px;
   font-weight: 600;
-  color: #555;
+  color: #495057; /* Texto escuro */
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .form-group label {
+  color: #ffd700; /* Amarelo (Dourado) */
 }
 
 /* Campos de entrada e texto */
@@ -47,16 +69,23 @@
   width: 100%;
   padding: 12px;
   box-sizing: border-box;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
   font-size: 1rem;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  background-color: #f8f9fa; /* Fundo branco */
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+  background-color: #ffffff; /* Fundo branco */
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group textarea:focus {
+  background-color: #333; /* Fundo preto no modo escuro */
 }
 
 /* Campos de texto */
@@ -68,20 +97,44 @@
 /* Botões */
 button.btn {
   padding: 12px;
-  background-color: #007bff;
-  color: #ffffff;
+  background-color: #007bff; /* Azul */
+  color: #ffffff; /* Texto branco */
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
   font-size: 1rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button.btn:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Azul mais escuro */
   transform: translateY(-2px);
 }
 
 button.btn:active {
+  background-color: #004085; /* Azul escuro */
   transform: translateY(0);
+}
+
+/* Botão cancelar */
+button.cancel-btn {
+  background-color: #6c757d; /* Cinza */
+  margin-left: 10px;
+}
+
+button.cancel-btn:hover {
+  background-color: #5a6268; /* Cinza mais escuro */
+}
+
+button.cancel-btn:active {
+  background-color: #4e555b; /* Cinza escuro */
+}
+
+body.dark-mode button.cancel-btn {
+  background-color: #ffd700; /* Amarelo (Dourado) */
+  color: #1a1a1a; /* Preto */
+}
+
+body.dark-mode button.cancel-btn:hover {
+  background-color: #ffc700; /* Tom mais claro de dourado */
 }

@@ -3,17 +3,25 @@
     {
       "id": "1",
       "username": "admin",
-      "password": "admin123"
+      "password": "admin"
     },
     {
-      "id": "fe9a",
+      "id": "2158",
       "username": "yago",
-      "password": "yago",
-      "email": "admin@admin",
-      "role": "admin",
-      "status": "online"
+      "password": "abcd",
+      "email": "yagocarvalho2001@gmail.com",
+      "role": "Admin",
+      "status": "Online"
     }
   ],
-  "products": [],
+  "products": [
+    {
+      "id": "8484",
+      "name": "banana",
+      "description": "fruta",
+      "price": "20",
+      "stock": "2"
+    }
+  ],
   "services": []
 }

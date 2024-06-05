@@ -1,19 +1,16 @@
 .footer {
-  background-color: #1a1a1a;
-  color: #ffffff;
+  background-color: #0056b3; /* Fundo azul no modo claro */
+  color: #ffffff; /* Texto branco */
   padding: 40px 20px;
   text-align: center;
-  border-top: 4px solid #007bff;
-}
-
-.footer p {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.5;
+  border-top: 4px solid #0056b3; /* Borda superior azul */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+  border-bottom-left-radius: 10px; /* Arredonda a borda inferior esquerda */
+  border-bottom-right-radius: 10px; /* Arredonda a borda inferior direita */
 }
 
 .footer a {
-  color: #007bff;
+  color: #0056b3;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -29,7 +26,7 @@
 .footer .social-icons a {
   margin: 0 10px;
   display: inline-block;
-  color: #ffffff;
+  color: #ffffff; /* Ícones brancos */
   font-size: 1.5rem;
   transition: color 0.3s ease;
 }
@@ -40,4 +37,14 @@
 
 .footer .social-icons a i {
   display: inline-block;
+}
+
+body.dark-mode .footer {
+  background-color: #1a1a1a; /* Fundo preto no modo escuro */
+  color: #ffffff; /* Texto branco no modo escuro */
+  border-top-color: #FFD700; /* Borda superior dourada no modo escuro */
+}
+
+body.dark-mode .footer .social-icons a:hover {
+  color: #FFD700; /* Ícones dourados no modo escuro */
 }

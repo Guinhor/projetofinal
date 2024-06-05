@@ -1,110 +1,163 @@
+/* Container Principal dos Usuários */
 .users-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #f7f7f7;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .users-container h2 {
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .users-container form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 20px;
-  }
-  
-  .users-container .form-group {
-    margin-bottom: 10px;
-  }
-  
-  .users-container input {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    box-sizing: border-box;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  
-  .users-container button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-  }
-  
-  .users-container button:hover {
-    background-color: #0056b3;
-  }
-  
-  .user-list {
-    list-style-type: none;
-    padding: 0;
-    width: 100%;
-    max-width: 600px;
-  }
-  
-  .user-item {
-    background-color: #fff;
-    margin-bottom: 10px;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .user-item div {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .user-buttons .btn {
-    background-color: #007bff;
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 10px;
-  }
-  
-  .user-buttons .edit-btn {
-    background-color: #28a745;
-  }
-  
-  .user-buttons .delete-btn {
-    background-color: #dc3545;
-  }
-  
-  .user-buttons .btn:hover {
-    background-color: #0056b3;
-  }
-  
-  .user-buttons .edit-btn:hover {
-    background-color: #218838;
-  }
-  
-  .user-buttons .delete-btn:hover {
-    background-color: #c82333;
-  }
-  
-  .no-users {
-    color: #666;
-    font-size: 18px;
-    margin-top: 20px;
-    }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 0px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .users-container {
+  background-color: #1a1a1a; /* Preto */
+  color: #FFD700; /* Amarelo (Dourado) */
+}
+
+/* Título dos Usuários */
+.users-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+body.dark-mode .users-container h2 {
+  color: #FFD700; /* Amarelo (Dourado) */
+}
+
+/* Formulário de Usuários */
+.users-container form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+/* Grupo de Formulário */
+.users-container .form-group {
+  margin-bottom: 10px;
+}
+
+/* Inputs do Formulário */
+.users-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .users-container input {
+  background-color: #333;
+  border-color: #555;
+  color: #FFD700;
+}
+
+/* Botões do Formulário */
+.users-container button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.users-container button:hover {
+  background-color: #0056b3;
+}
+
+body.dark-mode .users-container button {
+  background-color: #FFD700; /* Amarelo (Dourado) */
+  color: #1a1a1a; /* Preto */
+}
+
+body.dark-mode .users-container button:hover {
+  background-color: #FFC700; /* Tom mais claro de dourado */
+}
+
+/* Lista de Usuários */
+.user-list {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Item de Usuário */
+.user-item {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .user-item {
+  background-color: #333; /* Preto */
+  color: #FFD700; /* Amarelo (Dourado) */
+}
+
+/* Botões dos Itens de Usuário */
+.user-buttons .btn {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s;
+}
+
+.user-buttons .edit-btn {
+  background-color: #28a745;
+}
+
+.user-buttons .delete-btn {
+  background-color: #dc3545;
+}
+
+.user-buttons .btn:hover {
+  background-color: #0056b3;
+}
+
+.user-buttons .edit-btn:hover {
+  background-color: #218838;
+}
+
+.user-buttons .delete-btn:hover {
+  background-color: #c82333;
+}
+
+body.dark-mode .user-buttons .btn {
+  background-color: #FFD700; /* Amarelo (Dourado) */
+  color: #1a1a1a; /* Preto */
+}
+
+body.dark-mode .user-buttons .btn:hover {
+  background-color: #FFC700; /* Tom mais claro de dourado */
+}
+
+/* Mensagem de Nenhum Usuário */
+.no-users {
+  color: #666;
+  font-size: 18px;
+  margin-top: 20px;
+  transition: color 0.3s;
+}
+
+body.dark-mode .no-users {
+  color: #FFD700; /* Amarelo (Dourado) */
+}

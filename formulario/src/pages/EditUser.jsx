@@ -4,13 +4,11 @@ import '../styles/EditUser.css';
 
 const EditUser = () => {
   const { id } = useParams();
-  const navigate = useNavigate(); // Usando useNavigate para navegação
+  const navigate = useNavigate();
   const [user, setUser] = useState({
-    username: '',
-    password: '',
+    name: '',
     email: '',
-    role: '',
-    status: '',
+    password: ''
   });
 
   useEffect(() => {
@@ -19,7 +17,7 @@ const EditUser = () => {
 
   const fetchUser = async () => {
     try {
-      const response = await fetch(`http://localhost:3001/usuarios/${id}`);
+      const response = await fetch(`http://localhost:3001/users/${id}`);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -38,17 +36,21 @@ const EditUser = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await fetch(`http://localhost:3001/usuarios/${id}`, {
+      await fetch(`http://localhost:3001/users/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(user),
       });
-      navigate('/usuarios'); // Redirecionando de volta para a página de usuários após a edição
+      navigate('/usuarios');
     } catch (error) {
       console.error('Error updating user:', error);
     }
+  };
+
+  const handleGoBack = () => {
+    navigate(-1);
   };
 
   return (
@@ -56,56 +58,37 @@ const EditUser = () => {
       <h2>Editar Usuário</h2>
       <form onSubmit={handleSubmit} className="edit-user-form">
         <div className="form-group">
-          <label htmlFor="username">Usuário:</label>
-          <input 
-            type="text" 
-            id="username" 
-            name="username" 
-            value={user.username} 
-            onChange={handleInputChange} 
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Senha:</label>
-          <input 
-            type="password" 
-            id="password" 
-            name="password" 
-            value={user.password} 
-            onChange={handleInputChange} 
+          <label htmlFor="name">Nome:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={user.name}
+            onChange={handleInputChange}
           />
         </div>
         <div className="form-group">
           <label htmlFor="email">E-mail:</label>
-          <input 
-            type="email" 
-            id="email" 
-            name="email" 
-            value={user.email} 
-            onChange={handleInputChange} 
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={user.email}
+            onChange={handleInputChange}
           />
         </div>
         <div className="form-group">
-          <label htmlFor="role">Cargo:</label>
-          <input 
-            type="text" 
-            id="role" 
-            name="role" 
-            value={user.role} 
-            onChange={handleInputChange} 
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="status">Status:</label>
-          <input 
-            type="text" 
-            id="status" 
-            name="status" 
-            value={user.status} 
-            onChange={handleInputChange} 
+          <label htmlFor="password">Senha:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            value={user.password}
+            onChange={handleInputChange}
           />
         </div>
         <button type="submit" className="btn">Salvar</button>
+        <button type="button" className="cancel-btn" onClick={handleGoBack}>Cancelar</button>
       </form>
     </div>
   );

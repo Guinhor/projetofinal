@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import '../styles/EditProduct.css'
+import '../styles/EditProduct.css';
 
 const EditProduct = () => {
   const { id } = useParams();
@@ -50,10 +50,14 @@ const EditProduct = () => {
     }
   };
 
+  const handleCancel = () => {
+    navigate('/produtos');
+  };
+
   return (
     <div className="edit-product-container">
       <h2>Editar Produto</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="edit-product-form">
         <div className="form-group">
           <label htmlFor="name">Nome:</label>
           <input 
@@ -93,7 +97,8 @@ const EditProduct = () => {
             onChange={handleInputChange} 
           />
         </div>
-        <button type="submit">Salvar</button>
+        <button type="submit" className="btn">Salvar</button>
+        <button type="button" className="cancel-btn" onClick={handleCancel}>Cancelar</button>
       </form>
     </div>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faTwitter, faInstagram, faLinkedinIn, faYoutube, faTiktok } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   const handleIconClick = (url) => {
@@ -23,6 +23,12 @@ const Footer = () => {
         </a>
         <a href="#" onClick={() => handleIconClick("https://www.linkedin.com")}>
           <FontAwesomeIcon icon={faLinkedinIn} />
+        </a>
+        <a href="#" onClick={() => handleIconClick("https://www.youtube.com")}>
+          <FontAwesomeIcon icon={faYoutube} />
+        </a>
+        <a href="#" onClick={() => handleIconClick("https://www.tiktok.com")}>
+          <FontAwesomeIcon icon={faTiktok} />
         </a>
       </div>
     </div>

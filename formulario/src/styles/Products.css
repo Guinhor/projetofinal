@@ -1,18 +1,31 @@
+/* Container de Produtos */
 .products-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
   background-color: #f7f7f7;
-  border-radius: 8px;
+  border-radius: 0px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .products-container {
+  background-color: #1a1a1a; /* Cinza escuro */
+  color: #FFD700; /* Amarelo (Dourado) */
 }
 
 .products-container h2 {
   margin-bottom: 20px;
   color: #333;
+  transition: color 0.3s;
 }
 
+body.dark-mode .products-container h2 {
+  color: #FFD700; /* Amarelo (Dourado) */
+}
+
+/* Botões */
 .products-container .btn {
   background-color: #007bff;
   color: white;
@@ -23,13 +36,24 @@
   text-align: center;
   margin-bottom: 20px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
 
 .products-container .btn:hover {
   background-color: #0056b3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+body.dark-mode .products-container .btn {
+  background-color: #FFD700; /* Amarelo (Dourado) */
+  color: #000000; /* Preto */
+}
+
+body.dark-mode .products-container .btn:hover {
+  background-color: #FFA500; /* Amarelo Escuro (Dourado) */
+}
+
+/* Lista de Produtos */
 .product-list {
   list-style-type: none;
   padding: 0;
@@ -46,6 +70,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+}
+
+body.dark-mode .product-item {
+  background-color: #333333; /* Preto Escuro */
+  color: #FFD700; /* Amarelo (Dourado) */
 }
 
 .product-item div {
@@ -53,13 +83,14 @@
   flex-direction: column;
 }
 
+/* Botões de Produto */
 .product-buttons .btn {
-  padding: 5px 10px;
+  padding: 8px 12px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   margin-left: 10px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .product-buttons .edit-btn {
@@ -71,7 +102,7 @@
 }
 
 .product-buttons .btn:hover {
-  background-color: #0056b3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .product-buttons .edit-btn:hover {
@@ -82,23 +113,34 @@
   background-color: #c82333;
 }
 
+body.dark-mode .product-buttons .btn {
+  color: #000000; /* Preto */
+}
+
+body.dark-mode .product-buttons .edit-btn {
+  background-color: #FFD700; /* Amarelo (Dourado) */
+}
+
+body.dark-mode .product-buttons .edit-btn:hover {
+  background-color: #FFA500; /* Amarelo Escuro (Dourado) */
+}
+
+body.dark-mode .product-buttons .delete-btn {
+  background-color: #FFD700; /* Amarelo (Dourado) */
+}
+
+body.dark-mode .product-buttons .delete-btn:hover {
+  background-color: #FFA500; /* Amarelo Escuro (Dourado) */
+}
+
+/* Mensagem de Sem Produtos */
 .no-products {
   color: #666;
   font-size: 18px;
   margin-top: 20px;
+  transition: color 0.3s;
 }
 
-/* Adiciona sombra nos botões ao passar o mouse */
-.btn:hover {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Ajusta o espaçamento dos botões */
-.product-buttons .btn {
-  padding: 8px 12px;
-}
-
-/* Ajusta o espaçamento entre os ícones dos botões */
-.product-buttons .btn:not(:last-child) {
-  margin-right: 10px;
+body.dark-mode .no-products {
+  color: #FFD700; /* Amarelo (Dourado) */
 }

@@ -1,34 +1,72 @@
+/* Navbar Container */
 .navbar {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  .navbar-nav {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
-  }
-  
-  .nav-item {
-    margin: 0;
-  }
-  
-  .nav-link {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-  }
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s, color 0.3s, border-top-left-radius 0.3s, border-top-right-radius 0.3s; /* Adicionada a transição para as bordas superiores arredondadas */
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 10px; /* Arredonda a borda superior esquerda */
+  border-top-right-radius: 10px; /* Arredonda a borda superior direita */
+}
 
-  .navbar li {
-    margin-right: 20px;
-  }
+body.dark-mode .navbar {
+  background-color: #1a1a1a; /* Preto */
+  color: #FFD700; /* Amarelo (Dourado) */
+  border-bottom-color: #FFD700; /* Borda inferior dourada no modo escuro */
+}
 
-  .navbar a {
-    color: #fff;
-    text-decoration: none;
-  }
+/* Navbar Navigation */
+.navbar-nav {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
 
-  .navbar a:hover {
-    text-decoration: underline;
-  }
+.nav-item {
+  margin: 0;
+}
+
+/* Navbar Links */
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s, text-decoration 0.3s;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .nav-link {
+  color: #FFD700; /* Amarelo (Dourado) */
+}
+
+body.dark-mode .nav-link:hover {
+  background-color: rgba(255, 215, 0, 0.1); /* Tom dourado claro */
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+body.dark-mode .navbar a:hover {
+  text-decoration: underline;
+  color: #FFA500; /* Amarelo Escuro (Dourado) */
+}
+
+/* Navbar List Items */
+.navbar li {
+  margin-right: 20px;
+}
+
+body.dark-mode .navbar li {
+  margin-right: 20px;
+}

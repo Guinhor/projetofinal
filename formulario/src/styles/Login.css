@@ -1,48 +1,103 @@
-/* Centralizando o container de login */
+/* Container principal */
 .login-container {
-    max-width: 400px;
-    margin: 100px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-  }
-  
-  .login-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .login-form .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .login-form .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  .login-form .form-group input {
-    width: calc(100% - 20px);
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .login-form .btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .login-form .btn:hover {
-    background-color: #0056b3;
-  }
-  
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #f8f9fa; /* Fundo branco */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode .login-container {
+  background-color: #333; /* Fundo preto */
+}
+
+/* Formulário */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Grupo de formulário */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Rótulos */
+.login-form label {
+  font-weight: 600;
+  color: #495057; /* Texto escuro no modo claro */
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .login-form label {
+  color: #FFD700; /* Amarelo (Dourado) no modo escuro */
+}
+/* Campos de entrada */
+.login-form input {
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  background-color: #f8f9fa; /* Fundo branco */
+}
+
+.login-form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+  background-color: #ffffff; /* Fundo branco */
+}
+
+body.dark-mode .login-form input:focus {
+  background-color: #333; /* Fundo preto no modo escuro */
+}
+
+/* Botões */
+.login-form button {
+  padding: 12px;
+  background-color: #007bff; /* Azul */
+  color: #ffffff; /* Texto branco */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+.login-form button:hover {
+  background-color: #0056b3; /* Azul mais escuro */
+  transform: translateY(-2px);
+}
+
+.login-form button:active {
+  background-color: #004085; /* Azul escuro */
+  transform: translateY(0);
+}
+
+/* Botão cancelar */
+.login-form button.cancel-btn {
+  background-color: #6c757d; /* Cinza */
+  margin-left: 10px;
+}
+
+.login-form button.cancel-btn:hover {
+  background-color: #5a6268; /* Cinza mais escuro */
+}
+
+.login-form button.cancel-btn:active {
+  background-color: #4e555b; /* Cinza escuro */
+}
+
+body.dark-mode .login-form button.cancel-btn {
+  background-color: #FFD700; /* Amarelo (Dourado) */
+  color: #1a1a1a; /* Preto */
+}
+
+body.dark-mode .login-form button.cancel-btn:hover {
+  background-color: #FFC700; /* Tom mais claro de dourado */
+}

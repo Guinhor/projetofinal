@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FaSun, FaMoon } from 'react-icons/fa'; // Importando ícones do React Icons
 import '../styles/Login.css'; // Importando o arquivo CSS para estilização
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [darkMode, setDarkMode] = useState(false); // Estado para controlar o modo escuro
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -30,8 +32,16 @@ const Login = () => {
     }
   };
 
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    document.body.classList.toggle('dark-mode'); // Alternando o modo escuro no corpo do documento
+  };
+
   return (
     <div className="login-container">
+      <div className="dark-mode-toggle" onClick={toggleDarkMode}>
+        {darkMode ? <FaSun /> : <FaMoon />} {/* Usando ícones para representar os modos claro e escuro */}
+      </div>
       <h2>Login</h2>
       <form onSubmit={handleLogin} className="login-form">
         <div className="form-group">

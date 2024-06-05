@@ -13,6 +13,12 @@ body {
   background-color: #f5f7fa;
   color: #333;
   line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s; /* Adiciona transição suave */
+}
+
+body.dark-mode {
+  background-color: #121212; /* Preto */
+  color: #FFD700; /* Amarelo (Dourado) */
 }
 
 /* Estilizando links */
@@ -24,6 +30,14 @@ a {
 
 a:hover {
   color: #0056b3;
+}
+
+body.dark-mode a {
+  color: #FFD700; /* Amarelo (Dourado) */
+}
+
+body.dark-mode a:hover {
+  color: #FFA500; /* Amarelo Escuro (Dourado) */
 }
 
 /* Estilizando listas */
@@ -40,17 +54,31 @@ li {
   margin-bottom: 0.5rem;
 }
 
+body.dark-mode ul, body.dark-mode ol, body.dark-mode li {
+  color: #FFD700; /* Amarelo (Dourado) */
+}
+
 /* Estilizando cabeçalhos */
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
   font-weight: 600;
   color: #343a40;
+  transition: color 0.3s; /* Adiciona transição suave */
+}
+
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+  color: #FFD700; /* Amarelo (Dourado) */
 }
 
 /* Estilizando parágrafos e textos */
 p {
   margin-bottom: 1rem;
   line-height: 1.6;
+  transition: color 0.3s; /* Adiciona transição suave */
+}
+
+body.dark-mode p {
+  color: #FFD700; /* Amarelo (Dourado) */
 }
 
 /* Estilizando botões */
@@ -64,11 +92,20 @@ button {
   color: #fff;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button:hover {
   background-color: #0056b3;
+}
+
+body.dark-mode button {
+  background-color: #FFD700; /* Amarelo (Dourado) */
+  color: #000000; /* Preto */
+}
+
+body.dark-mode button:hover {
+  background-color: #FFA500; /* Amarelo Escuro (Dourado) */
 }
 
 /* Estilizando inputs e textareas */
@@ -79,12 +116,22 @@ input, textarea {
   border: 1px solid #ced4da;
   border-radius: 4px;
   font-size: 1rem;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 input:focus, textarea:focus {
   border-color: #007bff;
   outline: none;
+}
+
+body.dark-mode input, body.dark-mode textarea {
+  background-color: #333333; /* Preto Escuro */
+  color: #FFD700; /* Amarelo (Dourado) */
+  border: 1px solid #FFD700; /* Amarelo (Dourado) */
+}
+
+body.dark-mode input:focus, body.dark-mode textarea:focus {
+  border-color: #FFA500; /* Amarelo Escuro (Dourado) */
 }
 
 /* Estilizando tabelas */
@@ -105,11 +152,24 @@ th {
   font-weight: bold;
 }
 
+body.dark-mode table, body.dark-mode th, body.dark-mode td {
+  background-color: #1a1a1a; /* Cinza escuro */
+  color: #FFD700; /* Amarelo (Dourado) */
+  border: 1px solid #FFD700; /* Amarelo (Dourado) */
+}
+
 /* Definição de contêiner principal */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+  transition: background-color 0.3s, color 0.3s; /* Adiciona transição suave */
+}
+
+body.dark-mode .container {
+  background-color: #1a1a1a; /* Cinza escuro */
+  color: #FFD700; /* Amarelo (Dourado) */
+  border-radius: 8px;
 }
 
 /* Classes utilitárias para espaçamento */
@@ -142,12 +202,38 @@ th {
   text-align: center;
 }
 
-/* Classe utilitária para textos em negrito */
 .font-bold {
   font-weight: 700;
 }
 
-/* Classe utilitária para textos em itálico */
 .font-italic {
   font-style: italic;
+}
+
+/* Botão de alternância do modo escuro */
+.dark-mode-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #0056b3;
+}
+
+body.dark-mode .dark-mode-toggle {
+  background-color: #FFD700; /* Amarelo (Dourado) */
+  color: #000000; /* Preto */
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+  background-color: #FFA500; /* Amarelo Escuro (Dourado) */
 }
