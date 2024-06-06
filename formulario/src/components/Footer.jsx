@@ -24,7 +24,7 @@ const Footer = () => {
         <a href="#" onClick={() => handleIconClick("https://www.linkedin.com")}>
           <FontAwesomeIcon icon={faLinkedinIn} />
         </a>
-        <a href="#" onClick={() => handleIconClick("https://www.youtube.com")}>
+        <a href="#" onClick={() => handleIconClick("https://www.youtube.com/watch?v=dQw4w9WgXcQ")}>
           <FontAwesomeIcon icon={faYoutube} />
         </a>
         <a href="#" onClick={() => handleIconClick("https://www.tiktok.com")}>
