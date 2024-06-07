@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #f7f7f7; /* Fundo branco */
   padding: 20px;
   transition: background-color 0.3s ease;
@@ -83,9 +83,16 @@ body.dark-mode .form-group label {
   background-color: #ffffff; /* Fundo branco */
 }
 
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+  background-color: #333; /* Fundo preto no modo escuro */
+  border-color: #555; /* Borda cinza escuro no modo escuro */
+  color: #ffd700; /* Texto dourado no modo escuro */
+}
+
 body.dark-mode .form-group input:focus,
 body.dark-mode .form-group textarea:focus {
-  background-color: #333; /* Fundo preto no modo escuro */
+  background-color: #444; /* Fundo um pouco mais claro no modo escuro */
 }
 
 /* Campos de texto */
@@ -104,6 +111,7 @@ button.btn {
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
 }
 
 button.btn:hover {

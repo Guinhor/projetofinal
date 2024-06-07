@@ -35,6 +35,7 @@ body.dark-mode .login-container {
 body.dark-mode .login-form label {
   color: #FFD700; /* Amarelo (Dourado) no modo escuro */
 }
+
 /* Campos de entrada */
 .login-form input {
   padding: 12px;
@@ -101,3 +102,15 @@ body.dark-mode .login-form button.cancel-btn {
 body.dark-mode .login-form button.cancel-btn:hover {
   background-color: #FFC700; /* Tom mais claro de dourado */
 }
+
+/* Texto de erro */
+.error-message {
+  color: #dc3545 !important; /* Vermelho */
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+.error-message.smaller {
+  font-size: 0.8rem;
+}
+

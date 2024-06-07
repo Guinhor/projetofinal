@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import '../styles/AddProduct.css';
 
 const AddProduct = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Hook para navegação
   const [product, setProduct] = useState({
     name: '',
     description: '',
@@ -11,11 +11,13 @@ const AddProduct = () => {
     stock: ''
   });
 
+  // Função para atualizar o estado do produto conforme o usuário digita nos campos do formulário
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setProduct({ ...product, [name]: value });
   };
 
+  // Função para lidar com o envio do formulário
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Verificar se algum campo está vazio
@@ -24,6 +26,7 @@ const AddProduct = () => {
       return;
     }
     try {
+      // Enviar uma requisição POST para adicionar o novo produto
       await fetch('http://localhost:3001/products', {
         method: 'POST',
         headers: {
@@ -31,6 +34,7 @@ const AddProduct = () => {
         },
         body: JSON.stringify(product),
       });
+      // Redirecionar para a página de produtos após adicionar o produto com sucesso
       navigate('/produtos');
     } catch (error) {
       console.error('Error adding product:', error);

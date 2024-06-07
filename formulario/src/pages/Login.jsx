@@ -1,48 +1,61 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { FaSun, FaMoon } from 'react-icons/fa'; // Importando ícones do React Icons
-import '../styles/Login.css'; // Importando o arquivo CSS para estilização
+import { FaSun, FaMoon } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom'; // Importando hook para navegação
+import '../styles/Login.css';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [darkMode, setDarkMode] = useState(false); // Estado para controlar o modo escuro
-  const navigate = useNavigate();
+  const [darkMode, setDarkMode] = useState(false);
+  const [loading, setLoading] = useState(false); // Estado para controlar o indicador de carregamento
+  const [error, setError] = useState(''); // Estado para armazenar a mensagem de erro
+  const navigate = useNavigate(); // Hook para navegação
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    setLoading(true); // Ativar o indicador de carregamento
     try {
       const response = await fetch('http://localhost:3001/users');
       if (!response.ok) {
         throw new Error('Usuário ou senha incorretos. Por favor, tente novamente.');
-
       }
       const users = await response.json();
-
       const user = users.find(user => user.username === username && user.password === password);
-
       if (user) {
-        navigate('/produtos');
+        // Simular um pequeno atraso para analisar a resposta
+        setTimeout(() => {
+          setLoading(false); // Desativar o indicador de carregamento
+          navigate('/produtos'); // Redirecionar para a página de produtos
+        }, 1500);
       } else {
-        navigate('/error');
+        // Simular um pequeno atraso antes de exibir a mensagem de erro
+        setTimeout(() => {
+          setLoading(false); // Desativar o indicador de carregamento
+          setError('Usuário ou senha incorretos. Por favor, tente novamente.');
+        }, 1500);
       }
     } catch (error) {
+      setLoading(false); // Desativar o indicador de carregamento
       console.error('Login error:', error);
-      navigate('/error');
+      // Simular um pequeno atraso antes de exibir a mensagem de erro
+      setTimeout(() => {
+        setError('Ocorreu um erro ao tentar fazer login. Por favor, tente novamente mais tarde.');
+      }, 1500);
     }
   };
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
-    document.body.classList.toggle('dark-mode'); // Alternando o modo escuro no corpo do documento
+    document.body.classList.toggle('dark-mode');
   };
 
   return (
     <div className="login-container">
       <div className="dark-mode-toggle" onClick={toggleDarkMode}>
-        {darkMode ? <FaSun /> : <FaMoon />} {/* Usando ícones para representar os modos claro e escuro */}
+        {darkMode ? <FaSun /> : <FaMoon />}
       </div>
       <h2>Login</h2>
+      {error && <p className="error-message smaller">{error}</p>}
       <form onSubmit={handleLogin} className="login-form">
         <div className="form-group">
           <label htmlFor="username">Usuário</label>
@@ -66,7 +79,9 @@ const Login = () => {
             className="form-control"
           />
         </div>
-        <button type="submit" className="btn">Login</button>
+        <button type="submit" className="btn" disabled={loading}>
+          {loading ? 'Carregando...' : 'Login'}
+        </button>
       </form>
     </div>
   );

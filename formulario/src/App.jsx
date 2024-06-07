@@ -16,7 +16,6 @@ const App = () => (
     <div className="app">
     <Routes>
       <Route path="/" element={<Login />} />
-      <Route path="/error" element={<h2>Erro ao realizar Login. Verique o nome de usuário e/ou senha.</h2>} />
       <Route path="/produtos" element={<Layout><Products /></Layout>} />
       <Route path="/servicos" element={<Layout><Services /></Layout>} />
       <Route path="/usuarios" element={<Layout><Users /></Layout>} />

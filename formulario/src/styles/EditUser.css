@@ -36,8 +36,8 @@ body.dark-mode label {
   color: #FFD700; /* Amarelo (Dourado) */
 }
 
-/* Campos de entrada */
-input {
+/* Campos de entrada e seleção */
+input, select {
   padding: 12px;
   border: 1px solid #ced4da;
   border-radius: 6px;
@@ -47,14 +47,20 @@ input {
   background-color: #f8f9fa; /* Fundo branco */
 }
 
-input:focus {
+input:focus, select:focus {
   border-color: #007bff;
   box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
   background-color: #ffffff; /* Fundo branco */
 }
 
-body.dark-mode input:focus {
+body.dark-mode input, body.dark-mode select {
   background-color: #333; /* Fundo preto no modo escuro */
+  border-color: #555; /* Borda cinza escuro no modo escuro */
+  color: #FFD700; /* Texto dourado no modo escuro */
+}
+
+body.dark-mode input:focus, body.dark-mode select:focus {
+  background-color: #444; /* Fundo um pouco mais claro no modo escuro */
 }
 
 /* Botões */

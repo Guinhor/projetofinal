@@ -2,11 +2,12 @@
 .navbar {
   background-color: #007bff;
   color: white;
-  transition: background-color 0.3s, color 0.3s, border-top-left-radius 0.3s, border-top-right-radius 0.3s; /* Adicionada a transição para as bordas superiores arredondadas */
+  transition: background-color 0.3s, color 0.3s, border-top-left-radius 0.3s, border-top-right-radius 0.3s, border-bottom-color 0.3s; /* Adicionada a transição para a cor da borda inferior */
   padding: 10px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-top-left-radius: 10px; /* Arredonda a borda superior esquerda */
   border-top-right-radius: 10px; /* Arredonda a borda superior direita */
+  border-bottom: 4px solid transparent; /* Adicionada a borda inferior transparente */
 }
 
 body.dark-mode .navbar {

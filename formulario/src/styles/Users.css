@@ -41,7 +41,8 @@ body.dark-mode .users-container h2 {
 }
 
 /* Inputs do Formulário */
-.users-container input {
+.users-container input,
+.users-container select {
   width: 100%;
   padding: 10px;
   margin: 5px 0;
@@ -51,7 +52,8 @@ body.dark-mode .users-container h2 {
   transition: border-color 0.3s, background-color 0.3s, color 0.3s;
 }
 
-body.dark-mode .users-container input {
+body.dark-mode .users-container input,
+body.dark-mode .users-container select {
   background-color: #333;
   border-color: #555;
   color: #FFD700;

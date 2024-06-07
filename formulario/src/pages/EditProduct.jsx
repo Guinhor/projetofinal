@@ -3,8 +3,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import '../styles/EditProduct.css';
 
 const EditProduct = () => {
-  const { id } = useParams();
-  const navigate = useNavigate();
+  const { id } = useParams(); // Obtém o parâmetro de rota `id`
+  const navigate = useNavigate(); // Hook para navegação
   const [product, setProduct] = useState({
     name: '',
     description: '',
@@ -12,10 +12,12 @@ const EditProduct = () => {
     stock: ''
   });
 
+  // Efeito para buscar o produto a ser editado ao carregar o componente
   useEffect(() => {
     fetchProduct();
   }, []);
 
+  // Função para buscar o produto a ser editado
   const fetchProduct = async () => {
     try {
       const response = await fetch(`http://localhost:3001/products/${id}`);
@@ -29,14 +31,17 @@ const EditProduct = () => {
     }
   };
 
+  // Função para atualizar o estado do produto conforme o usuário digita nos campos do formulário
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setProduct({ ...product, [name]: value });
   };
 
+  // Função para lidar com o envio do formulário de edição
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      // Enviar uma requisição PUT para atualizar o produto
       await fetch(`http://localhost:3001/products/${id}`, {
         method: 'PUT',
         headers: {
@@ -44,12 +49,14 @@ const EditProduct = () => {
         },
         body: JSON.stringify(product),
       });
+      // Redirecionar para a página de produtos após editar o produto com sucesso
       navigate('/produtos');
     } catch (error) {
       console.error('Error updating product:', error);
     }
   };
 
+  // Função para lidar com o cancelamento da edição e retornar para a página de produtos
   const handleCancel = () => {
     navigate('/produtos');
   };

@@ -3,18 +3,24 @@ import { useParams, useNavigate } from 'react-router-dom';
 import '../styles/EditUser.css';
 
 const EditUser = () => {
-  const { id } = useParams();
-  const navigate = useNavigate();
+  const { id } = useParams(); // Obtém o parâmetro de rota 'id'
+  const navigate = useNavigate(); // Hook para navegação programática
+
+  // Estado para armazenar os dados do usuário a serem editados
   const [user, setUser] = useState({
     name: '',
     email: '',
-    password: ''
+    password: '',
+    role: '',
+    status: ''
   });
 
+  // Efeito de inicialização para buscar os dados do usuário
   useEffect(() => {
     fetchUser();
   }, []);
 
+  // Função para buscar os dados do usuário da API
   const fetchUser = async () => {
     try {
       const response = await fetch(`http://localhost:3001/users/${id}`);
@@ -28,11 +34,13 @@ const EditUser = () => {
     }
   };
 
+  // Função para lidar com a alteração nos campos de entrada do formulário
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setUser({ ...user, [name]: value });
   };
 
+  // Função para lidar com o envio do formulário de edição do usuário
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -43,14 +51,15 @@ const EditUser = () => {
         },
         body: JSON.stringify(user),
       });
-      navigate('/usuarios');
+      navigate('/usuarios'); // Navega de volta para a lista de usuários após a edição
     } catch (error) {
       console.error('Error updating user:', error);
     }
   };
 
+  // Função para lidar com o botão "Cancelar"
   const handleGoBack = () => {
-    navigate(-1);
+    navigate(-1); // Volta para a página anterior na pilha de histórico
   };
 
   return (
@@ -86,6 +95,33 @@ const EditUser = () => {
             value={user.password}
             onChange={handleInputChange}
           />
+        </div>
+        <div className="form-group">
+          <label htmlFor="role">Cargo:</label>
+          <select
+            id="role"
+            name="role"
+            value={user.role}
+            onChange={handleInputChange}
+          >
+            <option value="">Selecione o cargo</option>
+            <option value="Administrador">Administrador</option>
+            <option value="Editor">Editor</option>
+            <option value="Visualizador">Visualizador</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label htmlFor="status">Status:</label>
+          <select
+            id="status"
+            name="status"
+            value={user.status}
+            onChange={handleInputChange}
+          >
+            <option value="">Selecione o status</option>
+            <option value="Ativo">Ativo</option>
+            <option value="Inativo">Inativo</option>
+          </select>
         </div>
         <button type="submit" className="btn">Salvar</button>
         <button type="button" className="cancel-btn" onClick={handleGoBack}>Cancelar</button>

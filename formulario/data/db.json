@@ -5,18 +5,18 @@
       "username": "admin",
       "password": "admin",
       "email": "admin@gmail.com",
-      "role": "Admin",
-      "status": "Online"
-    },
-    {
-      "id": "2158",
-      "username": "yago",
-      "password": "abcd",
-      "email": "yagocarvalho2001@gmail.com",
-      "role": "Admin",
-      "status": "Online"
+      "role": "Administrador",
+      "status": "Ativo"
     }
   ],
-  "products": [],
+  "products": [
+    {
+      "id": "d11a",
+      "name": "banana",
+      "description": "Fruta",
+      "price": "2",
+      "stock": "2"
+    }
+  ],
   "services": []
 }
