@@ -3,7 +3,10 @@
     {
       "id": "1",
       "username": "admin",
-      "password": "admin"
+      "password": "admin",
+      "email": "admin@gmail.com",
+      "role": "Admin",
+      "status": "Online"
     },
     {
       "id": "2158",
@@ -14,14 +17,6 @@
       "status": "Online"
     }
   ],
-  "products": [
-    {
-      "id": "8484",
-      "name": "banana",
-      "description": "fruta",
-      "price": "20",
-      "stock": "2"
-    }
-  ],
+  "products": [],
   "services": []
 }
