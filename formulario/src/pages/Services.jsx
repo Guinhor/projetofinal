@@ -147,7 +147,7 @@ const Services = () => {
       </form>
       {/* Verifica se há serviços cadastrados */}
       {services.length === 0 ? (
-        <p className="no-services">Não há nenhum serviço cadastrado</p>
+        <p className="no-services">Não há nenhum serviço cadastrado.</p>
       ) : (
         // Renderiza a lista de serviços
         <ul className="service-list">

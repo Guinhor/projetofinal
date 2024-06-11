@@ -1,22 +1,28 @@
-/* Container principal */
 .edit-user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Ajusta para começar do topo, evitando sobreposição com Navbar */
+  min-height: 100vh;
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
-  background-color: #f8f9fa; /* Fundo branco */
+  background-color: #f8f9fa; /* Fundo claro */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
+  padding-top: 100px; /* Espaço para a Navbar */
 }
 
 body.dark-mode .edit-user-container {
-  background-color: #333; /* Fundo preto */
+  background-color: #333; /* Fundo escuro */
 }
 
 /* Formulário */
 .edit-user-form {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 /* Grupo de formulário */
@@ -38,23 +44,24 @@ body.dark-mode label {
 
 /* Campos de entrada e seleção */
 input, select {
+  width: 100%;
   padding: 12px;
   border: 1px solid #ced4da;
   border-radius: 6px;
   box-sizing: border-box;
   font-size: 1rem;
   transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  background-color: #f8f9fa; /* Fundo branco */
+  background-color: #f8f9fa; /* Fundo claro */
 }
 
 input:focus, select:focus {
   border-color: #007bff;
   box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
-  background-color: #ffffff; /* Fundo branco */
+  background-color: #ffffff; /* Fundo claro */
 }
 
 body.dark-mode input, body.dark-mode select {
-  background-color: #333; /* Fundo preto no modo escuro */
+  background-color: #333; /* Fundo escuro */
   border-color: #555; /* Borda cinza escuro no modo escuro */
   color: #FFD700; /* Texto dourado no modo escuro */
 }

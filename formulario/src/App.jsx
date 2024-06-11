@@ -14,17 +14,17 @@ import './styles/App.css';
 const App = () => (
   <Router>
     <div className="app">
-    <Routes>
-      <Route path="/login" element={<Login />} />
-      <Route path="/produtos" element={<Layout><Products /></Layout>} />
-      <Route path="/servicos" element={<Layout><Services /></Layout>} />
-      <Route path="/usuarios" element={<Layout><Users /></Layout>} />
-      <Route path="/produtos/adicionar" element={<AddProduct />} />
-      <Route path="/produtos/editar/:id" element={<EditProduct />} />
-      <Route path="/usuarios/editar/:id" element={<EditUser />} />
-      <Route path="*" element={<ErrorPage />} />
-    </Routes>
-   </div> 
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/produtos" element={<Layout><Products /></Layout>} />
+        <Route path="/servicos" element={<Layout><Services /></Layout>} />
+        <Route path="/usuarios" element={<Layout><Users /></Layout>} />
+        <Route path="/produtos/adicionar" element={<Layout><AddProduct /></Layout>} />
+        <Route path="/produtos/editar/:id" element={<Layout><EditProduct /></Layout>} />
+        <Route path="/usuarios/editar/:id" element={<Layout><EditUser /></Layout>} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </div>
   </Router>
 );
 

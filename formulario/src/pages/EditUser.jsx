@@ -8,7 +8,7 @@ const EditUser = () => {
 
   // Estado para armazenar os dados do usuário a serem editados
   const [user, setUser] = useState({
-    name: '',
+    username: '', // Alterado de 'name' para 'username'
     email: '',
     password: '',
     role: '',
@@ -67,12 +67,12 @@ const EditUser = () => {
       <h2>Editar Usuário</h2>
       <form onSubmit={handleSubmit} className="edit-user-form">
         <div className="form-group">
-          <label htmlFor="name">Nome:</label>
+          <label htmlFor="username">Nome de Usuário:</label> {/* Alterado de 'name' para 'username' */}
           <input
             type="text"
-            id="name"
-            name="name"
-            value={user.name}
+            id="username"
+            name="username" // Alterado de 'name' para 'username'
+            value={user.username} // Alterado de 'user.name' para 'user.username'
             onChange={handleInputChange}
           />
         </div>

@@ -1,17 +1,20 @@
+/* EditProduct.css */
+
 /* Container principal */
 .edit-product-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #f7f7f7; /* Fundo branco */
+  justify-content: flex-start; /* Ajusta para começar do topo, evitando sobreposição com Navbar */
+  min-height: 100vh;
+  background-color: #f7f7f7; /* Fundo claro */
   padding: 20px;
   transition: background-color 0.3s ease;
+  padding-top: 100px; /* Espaço para a Navbar */
 }
 
 body.dark-mode .edit-product-container {
-  background-color: #1a1a1a; /* Fundo preto */
+  background-color: #1a1a1a; /* Fundo escuro */
 }
 
 /* Título */
@@ -29,7 +32,7 @@ body.dark-mode .edit-product-container h2 {
 
 /* Formulário */
 .edit-product-form {
-  background-color: #ffffff; /* Fundo branco */
+  background-color: #ffffff; /* Fundo claro */
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -41,7 +44,7 @@ body.dark-mode .edit-product-container h2 {
 }
 
 body.dark-mode .edit-product-form {
-  background-color: #333; /* Fundo preto */
+  background-color: #333; /* Fundo escuro */
   box-shadow: 0 4px 12px rgba(255, 215, 0, 0.1); /* Sombra amarela (dourada) */
 }
 
@@ -73,19 +76,19 @@ body.dark-mode .form-group label {
   border-radius: 6px;
   font-size: 1rem;
   transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  background-color: #f8f9fa; /* Fundo branco */
+  background-color: #f8f9fa; /* Fundo claro */
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: #007bff;
   box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
-  background-color: #ffffff; /* Fundo branco */
+  background-color: #ffffff; /* Fundo claro */
 }
 
 body.dark-mode .form-group input:focus,
 body.dark-mode .form-group textarea:focus {
-  background-color: #333; /* Fundo preto no modo escuro */
+  background-color: #333; /* Fundo escuro */
 }
 
 /* Campos de texto */

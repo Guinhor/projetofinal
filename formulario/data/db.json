@@ -7,14 +7,6 @@
       "email": "admin@gmail.com",
       "role": "Administrador",
       "status": "Ativo"
-    },
-    {
-      "id": "ae56",
-      "username": "yago",
-      "password": "yago",
-      "email": "yagocarvalho2001@gmail.com",
-      "role": "Visualizador",
-      "status": "Ativo"
     }
   ],
   "products": [
@@ -26,5 +18,14 @@
       "stock": "2"
     }
   ],
-  "services": []
+  "services": [
+    {
+      "id": "d1e0",
+      "name": "Régua",
+      "description": "Corte",
+      "price": "20",
+      "category": "Corte de Cabelo",
+      "duration": "2"
+    }
+  ]
 }
