@@ -67,7 +67,7 @@ const EditUser = () => {
       <h2>Editar Usuário</h2>
       <form onSubmit={handleSubmit} className="edit-user-form">
         <div className="form-group">
-          <label htmlFor="username">Nome de Usuário:</label> {/* Alterado de 'name' para 'username' */}
+          <label htmlFor="username">Nome de Usuário:</label>
           <input
             type="text"
             id="username"
