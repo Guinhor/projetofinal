@@ -7,6 +7,14 @@
       "email": "admin@gmail.com",
       "role": "Administrador",
       "status": "Ativo"
+    },
+    {
+      "id": "3995",
+      "username": "yago",
+      "password": "yago",
+      "email": "yagocarvalho2001@gmail.com",
+      "role": "Visualizador",
+      "status": "Inativo"
     }
   ],
   "products": [

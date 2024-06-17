@@ -27,7 +27,7 @@ const AddProduct = () => {
     }
     try {
       // Enviar uma requisição POST para adicionar o novo produto
-      await fetch('http://localhost:3001/products', {
+      await fetch('http://localhost:3000/products', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

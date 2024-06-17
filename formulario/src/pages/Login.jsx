@@ -15,7 +15,7 @@ const Login = () => {
     e.preventDefault();
     setLoading(true); // Ativar o indicador de carregamento
     try {
-      const response = await fetch('http://localhost:3001/users');
+      const response = await fetch('http://localhost:3000/users');
       if (!response.ok) {
         throw new Error('Usuário ou senha incorretos. Por favor, tente novamente.');
       }

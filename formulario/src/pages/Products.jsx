@@ -14,7 +14,7 @@ const Products = () => {
   // Função para buscar os produtos da API
   const fetchProducts = async () => {
     try {
-      const response = await fetch('http://localhost:3001/products');
+      const response = await fetch('http://localhost:3000/products');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -28,7 +28,7 @@ const Products = () => {
   // Função para lidar com a remoção de um produto
   const handleRemove = async (productId) => {
     try {
-      await fetch(`http://localhost:3001/products/${productId}`, {
+      await fetch(`http://localhost:3000/products/${productId}`, {
         method: 'DELETE',
       });
       // Atualiza a lista de produtos após a remoção

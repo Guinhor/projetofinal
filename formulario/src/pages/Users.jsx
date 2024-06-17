@@ -21,7 +21,7 @@ const Users = () => {
   // Função para buscar os usuários da API
   const fetchUsers = async () => {
     try {
-      const response = await fetch('http://localhost:3001/users');
+      const response = await fetch('http://localhost:3000/users');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -49,7 +49,7 @@ const Users = () => {
         role,
         status,
       };
-      const response = await fetch('http://localhost:3001/users', {
+      const response = await fetch('http://localhost:3000/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ const Users = () => {
   // Função para remover um usuário
   const handleRemove = async (userId) => {
     try {
-      await fetch(`http://localhost:3001/users/${userId}`, {
+      await fetch(`http://localhost:3000/users/${userId}`, {
         method: 'DELETE',
       });
       // Remove o usuário da lista de usuários após a remoção

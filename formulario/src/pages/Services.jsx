@@ -19,7 +19,7 @@ const Services = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await fetch('http://localhost:3001/services');
+        const response = await fetch('http://localhost:3000/services');
         const data = await response.json();
         setServices(data);
       } catch (error) {
@@ -34,7 +34,7 @@ const Services = () => {
     e.preventDefault();
     try {
       const newService = { name, description, price, category, duration };
-      const response = await fetch('http://localhost:3001/services', {
+      const response = await fetch('http://localhost:3000/services', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newService),
@@ -67,7 +67,7 @@ const Services = () => {
     e.preventDefault();
     try {
       const updatedService = { ...editingService, name, description, price, category, duration };
-      const response = await fetch(`http://localhost:3001/services/${editingService.id}`, {
+      const response = await fetch(`http://localhost:3000/services/${editingService.id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updatedService),
@@ -90,7 +90,7 @@ const Services = () => {
   // Função para remover um serviço
   const handleRemoveService = async (serviceId) => {
     try {
-      await fetch(`http://localhost:3001/services/${serviceId}`, {
+      await fetch(`http://localhost:3000/services/${serviceId}`, {
         method: 'DELETE',
       });
       // Atualiza a lista de serviços após a remoção

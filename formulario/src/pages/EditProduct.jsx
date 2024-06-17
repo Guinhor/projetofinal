@@ -20,7 +20,7 @@ const EditProduct = () => {
   // Função para buscar o produto a ser editado
   const fetchProduct = async () => {
     try {
-      const response = await fetch(`http://localhost:3001/products/${id}`);
+      const response = await fetch(`http://localhost:3000/products/${id}`);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -42,7 +42,7 @@ const EditProduct = () => {
     e.preventDefault();
     try {
       // Enviar uma requisição PUT para atualizar o produto
-      await fetch(`http://localhost:3001/products/${id}`, {
+      await fetch(`http://localhost:3000/products/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
