@@ -18,7 +18,7 @@ const Footer = () => {
 
   return (
     <div className="footer">
-      <p>&copy; 2024 Yago. Todos os direitos reservados.</p>
+      <p>&copy; 2024 Nathan & Yago. Todos os direitos reservados.</p>
       <div className="social-icons">
         {/* Ícone do Facebook */}
         <a href="#" onClick={() => handleIconClick("https://www.facebook.com")}>
